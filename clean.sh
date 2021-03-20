@@ -12,6 +12,7 @@ content.forEach(x => document.body.appendChild(x))
 
 Array.from(document.querySelectorAll("div.post div.shariff")).map(x => x.parentNode.removeChild(x))
 Array.from(document.querySelectorAll("div.entry-content ~ div")).map(x => x.parentNode.removeChild(x))
+Array.from(document.querySelectorAll("div.post> div.entry-content p")).filter(x => x.textContent.startsWith("In this recurring")).map(x => x.parentNode.removeChild(x))
 </script>
 EOF
 
